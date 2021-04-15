@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <title>hello world</title>
+    </head>
+    <body>
+        <button onclick="back()">back</button><br>
+        <img onclick="bigImg(this)" style = "width:200px;height:200px;" id = "image" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6uOKGkChlFsEIw-HWMu8fl6rYEfKOxEhtdA&usqp=CAU" img>
+       
+       <script>
+            var i = document.getElementById("image");
+            var f = 0 ;
+            function bigImg(x) {
+             if (f == 0 )
+             {
+            i.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa4X8VLnnC5Avs8Lo9uRt7qbxUQVuFq5bC0w&usqp=CAU";
+            f++;
+            }
+            else if (f == 1){
+                i.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAxY4bibdFyUYGWSOC7sc-fGTik9MiDg4-Q&usqp=CAU";
+                f++;
+            }
+            else if (f == 2){
+                i.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhr_xZOVWMhYdx23T40My8iKLm_uE9hqOiIg&usqp=CAU";
+                f++;
+            }
+            else if (f==3){
+                i.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQxomo1EGQESy_6TPJHgxunaQkdMU7SmJMQ&usqp=CAU";
+                f++;
+            }
+            else{
+                i.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOsAAADWCAMAAAAHMIWUAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB3A8VIAAFqm4S1AAAAAElFTkSuQmCC";
+              f++;
+            }
+        }
+        function back()
+        {
+            f = f-2 ;
+            bigImg(this);
+            
+        }
+
+            
+           
+        </script>
+ 
+    </body>
+</html>

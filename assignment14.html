@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <title>hello world</title>
+             <script>
+                var i = document.getElementById("image");
+                var f = 0 ;
+                function bigImg(x) {
+                 if (f == 0 )
+                 {
+                x.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa4X8VLnnC5Avs8Lo9uRt7qbxUQVuFq5bC0w&usqp=CAU";
+                f++;
+                }
+                else if (f == 1){
+                    x.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAxY4bibdFyUYGWSOC7sc-fGTik9MiDg4-Q&usqp=CAU";
+                    f++;
+                }
+                else if (f == 2){
+                    x.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhr_xZOVWMhYdx23T40My8iKLm_uE9hqOiIg&usqp=CAU";
+                    f++;
+                }
+                else{
+                    x.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQxomo1EGQESy_6TPJHgxunaQkdMU7SmJMQ&usqp=CAU";
+                    f++;
+                }
+            }
+    
+                
+               
+            </script>
+    </head>
+    <body>
+        <img onclick="bigImg(this)"  id = "image" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6uOKGkChlFsEIw-HWMu8fl6rYEfKOxEhtdA&usqp=CAU" img>
+       
+       
+ 
+    </body>
+</html>

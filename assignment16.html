@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>hello world</title>
+
+    <style>
+        #m1{
+            position: absolute;
+            top:300px;
+            left:460px;
+        }
+        #m2{
+            
+            position: absolute;
+            top:220px;
+            left:350px;
+        }
+        #m3{
+            position: absolute;
+            top:130px;
+            left:350px;
+        }
+        #m4{
+            
+            position: absolute;
+            top:60px;
+            left:460px;
+        }
+        #m5{
+            
+            position: absolute;
+            top:130px;
+            left:570px;
+        }
+        #m6{
+            position: absolute;
+            top:220px;
+            left:570px;
+        }
+        #m7{
+            position: absolute;
+            top:180px;
+            left:460px;
+
+        }
+        #orange{
+            position: absolute;
+            top: 300px;
+            left: 460px;
+        }
+       
+    </style>
+</head>
+<body>
+    <button onclick="start()">Start</button>
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m1" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m2" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m3" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m4" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m5" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m6" class="img" >
+    <img src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="stop()" onmouseout="restart()"id="m7" class="img" >
+  
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1qofB9qeXFvq3FdQL36yJniXrxGELFiK82nn624M8O-afsYRRM5kaIyuCSx5OCoLOBig&usqp=CAU" id="orange" width="80px" onmouseover="stop()" onmouseout="restart()">
+    
+
+
+
+    <script>
+        var x = new Array();
+        x  = [460, 350, 350, 460, 570, 570];
+        y = [300, 220, 130, 60, 130, 220];
+        var i = 0;
+        var j = 0;
+        var a =0;
+        var rotate;
+        function stop(){
+            a = 1;
+            clearTimeout(rotate);
+            fix();
+        }
+        function restart(){
+            clearTimeout(rotate)
+            a = 0;
+            fix();
+        }
+        function fix(){
+            clearTimeout(rotate);
+            if(a==0){
+                start();
+            }
+            else{
+                document.getElementById("orange").style.left = x[i]+"px";
+                document.getElementById("orange").style.top = y[i]+"px";
+            }
+            
+        }
+        function start(){
+               rotate =  setTimeout(function(){  
+                    if(i==5){
+                        i=-1;
+                    } 
+                    var k =i+1;      
+                    document.getElementById("orange").style.left = x[k]+"px";
+                    document.getElementById("orange").style.top = y[k]+"px";
+                    console.log(x[k]+" "+y[k]);
+                    i++;
+                    fix();
+                }, 1000)
+            }
+    </script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Assignemnt 18</title>
+    
+    <script>
+        var window1;
+        var window2;
+        var window3;
+        var window4;
+        var window5;
+        var window6;
+        var left1 = window.screen.availWidth - 350;
+        var top1 = window.screen.availHeight-200;
+        var top2 = top1 /2;
+        var left2 = left1/2;
+        function openFunction(){    
+            var leftRandom = (Math.random() * window.screen.availWidth);
+            var topRandom = (Math.random() * window.screen.availHeight);
+            document.getElementById("p").textContent = leftRandom;
+            document.getElementById("p1").textContent = topRandom;
+            window1 = window.open("", "", 'width=350px, height=200px, left=0px, top=0px');
+            window2 = window.open("", "", 'width=350px, height=200px,top=0px, left=' + left1);
+            window3 = window.open("", "", 'width=350px, height=200px, left=0px, top=' + top1);
+            window4 = window.open("", "", 'width=350px, height=200px, left=' + left1 + ', top=' + top1);
+            window5 = window.open("", "", 'width=350px, height=200px, left=' + left2 + ', top=' + top2);
+            window6 = window.open("", "", 'width=350px, height=200px, left=' + leftRandom + ', top=' + topRandom);
+            
+        }
+        function closeFunction(){
+            // window.close()
+            window1.close();
+            window2.close();
+            window3.close();
+            window4.close();
+            window5.close();
+            window6.close();
+        }
+    </script>
+</head>
+<body>
+    <img src="data:image/png;base64,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" height="350px" onclick="openFunction()">
+    <p id="p"></p>
+    <p id="p1"></p>
+    <form>
+        <input type="button" value="Close Window" onclick="closeFunction()">
+    </form>
+</body>
+</html>

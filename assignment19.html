@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+             <img style=" width:200px " id = "image" src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/diy-paper-flowers-1582662788.jpg?crop=0.631xw:0.945xh;0.0128xw,0.0504xh&resize=640:*" img>
+             <h1 id = "visit"></h1>
+
+             <script>
+                 var i = 0;
+                 if(localStorage.getItem('num'))
+                 {
+                   x = JSON.parse(localStorage.getItem('num'))
+                 }
+                 else{
+                 var x = 0;
+                }
+
+                 x = x+1 ;
+                  localStorage.setItem('num',x);
+                    var currentdate = new Date();
+                    var datemessage = currentdate.getDate() + "/" + (currentdate.getMonth()+1) 
+                    + "/" + currentdate.getFullYear() + " @ " 
+                    + currentdate.getHours() + ":" 
+                    + currentdate.getMinutes() ;
+
+                    if(localStorage.getItem('last1'))
+                 {
+                   i = localStorage.getItem('last1');
+                 }
+                    
+                 if(x==1){
+                    document.getElementById("visit").innerHTML = "you have never visited here";
+                 }
+                 else{
+                 document.getElementById("visit").innerHTML = "you have visited "+x+" times your last visit was "+i;}
+
+                 localStorage.setItem('last1',datemessage);
+             </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <title>hello world</title>
+    </head>
+    <body>
+        <img onmouseover="bigImg(this)"  onmouseout="normalImg(this)" id = "image" src = "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" img>
+        <script>
+            var i = document.getElementById("image");
+            function bigImg(x) {
+            i.src = "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+           
+            }
+            function normalImg(x) {
+            i.src = "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg";
+            }
+           
+        </script>
+ 
+    </body>
+</html>
